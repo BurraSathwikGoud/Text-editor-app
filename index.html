@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Text Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="line-numbers" id="lineNumbers">1</div>
+    <textarea id="editor" onscroll="syncScroll()" oninput="updateLineNumbers()" onkeyup="highlightLine()"></textarea>
+  </div>
+
+  <div class="controls">
+    <input type="file" id="fileInput" />
+    <button onclick="loadFile()">Load File</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
