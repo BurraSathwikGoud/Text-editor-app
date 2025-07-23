@@ -16,12 +16,12 @@ function highlightLine() {
   const currentLine = text.split("\n").length;
 
   const lines = editor.value.split('\n');
-  updateLineNumbers(); // Refresh to avoid flickering
+  updateLineNumbers(); 
   const highlighted = lines.map((line, idx) =>
     idx + 1 === currentLine ? `> ${line}` : `  ${line}`
   ).join('\n');
 
-  // You can optionally show this highlighted version in a read-only area
+  
   console.log("Current line:", currentLine);
 }
 
